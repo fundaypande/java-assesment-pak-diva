@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../cssFile/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <MenuBar maxHeight="92.0" prefHeight="92.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu fx:id="menuFIle" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="fileTambahUser" mnemonicParsing="false" text="Add New User                         " />
+                  <MenuItem fx:id="fileRating" mnemonicParsing="false" text="Input of Interest Rating" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="fileClose" mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuEdit" mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="editRating" mnemonicParsing="false" text="Rating Score" />
+                  <MenuItem fx:id="editAspect" mnemonicParsing="false" text="Aspect                                     " />
+                  <MenuItem fx:id="editInstrument" mnemonicParsing="false" text="Instrument                                                   " />
+                  <MenuItem fx:id="editPreference" mnemonicParsing="false" text="Preference Weights" />
+            </items>
+          </Menu>
+            <Menu fx:id="menuProcess" mnemonicParsing="false" text="Process">
+               <items>
+                  <MenuItem fx:id="processAspect" mnemonicParsing="false" text="Average Aspect                             " />
+                  <MenuItem fx:id="processNorm" mnemonicParsing="false" text="Normalitation Process                       " />
+                  <MenuItem fx:id="processResult" mnemonicParsing="false" text="Result Of Evalutation" />
+               </items>
+            </Menu>
+            <Menu fx:id="menuProfile" mnemonicParsing="false" text="Profile">
+               <items>
+                  <MenuItem fx:id="profileEdit" mnemonicParsing="false" text="Edit Profile                              " />
+               </items>
+            </Menu>
+            <Menu fx:id="menuProfile1" mnemonicParsing="false" text="Result">
+               <items>
+                  <MenuItem fx:id="resultView" mnemonicParsing="false" text="View Result" />
+               </items>
+            </Menu>
+          <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="helpAbout" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="tabPane" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0" />
+   </children>
+</AnchorPane>

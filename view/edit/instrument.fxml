@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="694.0" prefWidth="1126.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.edit.InstrumentController">
+    <children>
+        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="244.0" prefWidth="559.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="140.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="419.0" minWidth="10.0" prefWidth="419.0" />
+            </columnConstraints>
+            <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="93.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="93.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="38.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="12.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Instrument" GridPane.rowIndex="1" />
+                <Label text="Aspect" GridPane.rowIndex="2" />
+                <ComboBox fx:id="comboAspect" prefHeight="25.0" prefWidth="430.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <children>
+                        <Button fx:id="btnSave" mnemonicParsing="false" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: #0000DE;" text="Save" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnCancel" mnemonicParsing="false" prefHeight="35.0" prefWidth="87.0" style="-fx-background-color: #DE0000;" text="Cancel" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: #1AA160;" text="Update" textFill="WHITE" visible="false">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            <TextArea fx:id="textInstrument" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="ID Instrument" />
+            <TextField fx:id="fieldId" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+        <VBox fx:id="vbox" layoutX="14.0" layoutY="230.0" prefHeight="460.0" prefWidth="1098.0" style="-fx-background-color: #DE0000;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="250.0">
+            <children>
+                <TableView fx:id="table" prefHeight="461.0" prefWidth="1098.0">
+                    <columns>
+                        <TableColumn fx:id="tId" prefWidth="138.0" text="Instrument Id" />
+                        <TableColumn fx:id="tInstrument" prefWidth="705.0" text="Instrument" />
+                        <TableColumn fx:id="tAspek" minWidth="0.0" prefWidth="243.0" text="Aspek" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

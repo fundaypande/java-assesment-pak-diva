@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1860.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.process.NormalitationController">
+   <children>
+      <VBox fx:id="vBox" alignment="TOP_CENTER" layoutX="9.0" layoutY="14.0" prefHeight="557.0" prefWidth="1500.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="1086.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="NORMALITATION PROCESS">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelWarning" style="-fx-background-color: #D91022;" text="You have been fill the questionnaire at this period before" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxMaster" minWidth="1500.0" prefHeight="470.0" prefWidth="1277.0">
+               <children>
+                  <VBox fx:id="vBox1" prefHeight="470.0" prefWidth="815.0">
+                     <children>
+                        <TableView fx:id="tableFirst" prefHeight="470.0" prefWidth="975.0">
+                           <columns>
+                              <TableColumn fx:id="tWeight" prefWidth="64.00003051757812" sortable="false" text="Weight" />
+                              <TableColumn fx:id="tId" prefWidth="64.00003051757812" sortable="false" text="Aspect ID" />
+                              <TableColumn fx:id="tAssesment" prefWidth="130.99996948242188" sortable="false" text="System Assessment" />
+                              <TableColumn fx:id="tPlanning" prefWidth="116.99996948242188" sortable="false" text="Program Planning" />
+                              <TableColumn fx:id="tImplementation" prefWidth="152.0" sortable="false" text="Program Implementation" />
+                              <TableColumn fx:id="tImprove" prefWidth="134.0" sortable="false" text="Program Improvement" />
+                              <TableColumn fx:id="tCertification" prefWidth="138.0" sortable="false" text="Program Certification" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBox2" alignment="TOP_CENTER" prefHeight="470.0" prefWidth="102.0">
+                     <children>
+                        <Button fx:id="btnProses" mnemonicParsing="false" prefHeight="36.0" prefWidth="148.0" text="PROCESS" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox fx:id="vBox3" prefHeight="470.0" prefWidth="870.0">
+                     <children>
+                        <TableView fx:id="tableOne" prefHeight="470.0" prefWidth="399.0">
+                           <columns>
+                              <TableColumn fx:id="tAssesment1" prefWidth="191.0" sortable="false" text="System Assessment" />
+                              <TableColumn fx:id="tPlanning1" prefWidth="136.0" sortable="false" text="Program Planning" />
+                              <TableColumn fx:id="tImplementation1" prefWidth="204.0" sortable="false" text="Program Implementation" />
+                              <TableColumn fx:id="tImprove1" prefWidth="160.0" sortable="false" text="Program Improvement" />
+                              <TableColumn fx:id="tCertification1" prefWidth="177.0" sortable="false" text="Program Certification" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="263.0" prefWidth="1843.0">
+               <children>
+                  <GridPane prefHeight="251.0" prefWidth="693.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label text="Vektor V" GridPane.columnIndex="3" />
+                        <Label text="System Assessment" GridPane.rowIndex="1" />
+                        <Label text="Program Certification" GridPane.rowIndex="5" />
+                        <Label text="Program Planning" GridPane.rowIndex="2" />
+                        <Label text="Program Implementation" GridPane.rowIndex="3" />
+                        <Label text="Program Improvement" GridPane.rowIndex="4" />
+                        <TextField fx:id="pAssesment" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="pPlanning" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="pImplementation" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="pImprovement" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="pCertification" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="vAssesment" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="vPlanning" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField fx:id="vImplementation" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="vImprovement" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <TextField fx:id="vCertification" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Button fx:id="btnSave" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Save" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <TextField fx:id="pTotal" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="755.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.result.ResultController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label text="Result of Evaluation">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="table" prefHeight="286.0" prefWidth="1326.0">
+               <columns>
+                  <TableColumn fx:id="tPosition" prefWidth="75.0" text="Position" />
+                  <TableColumn fx:id="tDate" prefWidth="153.99996948242188" text="Date" />
+                  <TableColumn fx:id="tComponent" prefWidth="165.0" text="Componnent" />
+                  <TableColumn fx:id="tConstraint" prefWidth="418.0" text="Constraints" />
+                  <TableColumn fx:id="tRecomendation" prefWidth="377.0" text="Recommentadion" />
+               </columns>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="1328.0">
+               <children>
+                  <Button fx:id="btnReset" mnemonicParsing="false" style="-fx-background-color: #F44336;" text="Reset Data" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnKiri" mnemonicParsing="false" text="&lt;&lt;">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnKanan" mnemonicParsing="false" text="Previous Result &gt;&gt;" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
